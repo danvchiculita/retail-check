@@ -1100,7 +1100,26 @@
   margin-bottom: 10px;
   line-height: 1.6;
 }
-    
+ .form-section {
+  background: #ffffff;
+  padding: 100px 0;
+}
+
+.form-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-alt-contact {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.email-line {
+  font-weight: 700;
+  margin: 6px 0;
+  color: #0f172a;
+}   
   </style>
 </head>
 <body>
@@ -1647,28 +1666,28 @@
     <div class="lead-form-wrap">
       
       <div class="lead-form-intro">
-       <div class="section-label">Solicitare</div>
+       <div class="section-label">Request</div>
 
-<h2>Solicită o discuție confidențială despre execuția din piață.</h2>
+<h2>Request a confidential discussion about in-store execution.</h2>
 
 <p>
-Dacă ai semnale că execuția, disponibilitatea, prețul sau vizibilitatea din teren
-nu susțin ceea ce vezi în rapoarte, putem analiza rapid contextul și stabili
-dacă Retail Check este intervenția potrivită.
+If you see signals that execution, availability, pricing or visibility in-store
+do not match what you see in reports, we can quickly assess the situation
+and determine whether Retail Check is the right intervention.
 </p>
 
 <ul class="lead-list">
-  <li><strong>Fără prezentări inutile.</strong> Discuție aplicată pe situația ta reală din piață.</li>
-  <li><strong>Fără angajament automat.</strong> Clarificăm mai întâi dacă auditul are sens pentru tine.</li>
-  <li><strong>Confidențial.</strong> Informațiile transmise rămân strict între noi.</li>
+  <li><strong>No generic presentations.</strong> Applied discussion on your real market situation.</li>
+  <li><strong>No automatic engagement.</strong> We first clarify whether the audit makes sense for you.</li>
+  <li><strong>Confidential.</strong> All information remains strictly between us.</li>
 </ul>
 
       <div class="lead-form-card">
         <div class="form-card-top">
-          <h3>Cere evaluarea inițială</h3>
+          <h3>Request an initial assessment</h3>
           <p>
-            Lasă-mi câteva detalii și revin cu un răspuns clar privind potrivirea,
-            formatul și următorul pas recomandat.
+            Share a few details and I will come back with a clear recommendation
+      on fit, format, and the next best step.
           </p>
         </div>
         </div>
@@ -1677,58 +1696,84 @@ dacă Retail Check este intervenția potrivită.
           <input type="hidden" name="_subject" value="New Retail Check request">
           <input type="hidden" name="_value="dan.v.chiculita@gmail.com">
 
+         <section class="section form-section">
+  <div class="container">
+
+    <div class="form-wrapper">
+      <div class="lead-form-card">
+
+        <div class="form-card-top">
+          <h3>Request an initial assessment</h3>
+          <p>
+            Share a few details and I will come back with a clear recommendation
+            on fit, format, and the next best step.
+          </p>
+        </div>
+
+        <form action="https://formspree.io/f/mqegnrej" method="POST" class="retail-check-form">
+          <input type="hidden" name="_subject" value="New Retail Check request">
+
           <div class="form-row">
-            <label for="name">Nume</label>
-            <input type="text" id="name" name="Nume" placeholder="Numele tău" required>
+            <label>Name</label>
+            <input type="text" name="Name" placeholder="Your name" required>
           </div>
 
           <div class="form-row">
-            <label for="company">Companie</label>
-            <input type="text" id="company" name="Companie" placeholder="Numele companiei">
+            <label>Company</label>
+            <input type="text" name="Company" placeholder="Company name">
           </div>
 
           <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" placeholder="nume@companie.ro" required>
+            <label>Email</label>
+            <input type="email" name="Email" placeholder="name@company.com" required>
           </div>
 
           <div class="form-row">
-            <label for="phone">Telefon</label>
-            <input type="text" id="phone" name="Telefon" placeholder="+40 xxx xxx xxx">
+            <label>Phone</label>
+            <input type="text" name="Phone" placeholder="+40 xxx xxx xxx">
           </div>
 
           <div class="form-row">
-            <label for="interest">Ce te interesează?</label>
-            <select id="interest" name="Interes principal" required>
-              <option value="">Selectează o opțiune</option>
-              <option value="Retail Check punctual">Retail Check punctual</option>
-              <option value="Retail Monitoring recurent">Retail Monitoring recurent</option>
-              <option value="Audit disponibilitate / OOS">Audit disponibilitate / OOS</option>
-              <option value="Audit pret / promotie / executie">Audit preț / promoție / execuție</option>
-              <option value="Vreau o discutie de clarificare">Vreau o discuție de clarificare</option>
+            <label>What are you interested in?</label>
+            <select name="Interest" required>
+              <option value="">Select an option</option>
+              <option>Retail Check (one-time)</option>
+              <option>Retail Monitoring (recurring)</option>
+              <option>Availability / OOS audit</option>
+              <option>Pricing / promotion / execution audit</option>
+              <option>I need a clarification call</option>
             </select>
           </div>
 
           <div class="form-row">
-            <label for="message">Context scurt</label>
-            <textarea
-              id="message"
-              name="Mesaj"
-              rows="6"
-              placeholder="Descrie pe scurt problema: lipsă vizibilitate în teren, diferențe între rapoarte și realitate, probleme de preț, promoții, OOS, execuție sau disciplină comercială."
-              required
-            ></textarea>
-          </div>
-
-          <div class="form-note">
-            Prin trimiterea formularului, accepți să fii contactat exclusiv în legătură cu solicitarea ta.
+            <label>Brief context</label>
+            <textarea name="Message" rows="5" placeholder="Describe the situation briefly..." required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-full">
-            Trimite solicitarea
+            Submit request
           </button>
+
         </form>
+
+        <!-- alternativa email -->
+        <div class="form-alt-contact">
+          <p>
+            Prefer email? Write directly:
+          </p>
+          <p class="email-line">
+            dan.v.chiculita@gmail.com
+          </p>
+          <p class="form-note">
+            I reply within 24–48h · Full confidentiality.
+          </p>
+        </div>
+
       </div>
+    </div>
+
+  </div>
+</section>
   
   <!-- FINAL CTA -->
   <section class="final-section">
